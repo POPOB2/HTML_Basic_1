@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>切版練習</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .container {
+        /*div本身並無高度的預設,測試時需用文字或給予高度進行填充*/
+        /*如果沒有container hight(即內容)抓不到高度*/
+        /* height: 200px; */
+        
+        background-color: lightgrey;
+        /* width: 960px; */
+        width: 100%;
+        margin: 0;
+
+
+        /*若文字超出框架使用overflow隱藏或滾動文字*/
+        /* overflow: hidden; */
+        /* overflow: scroll; */
+
+
+
+    }
+
+    .col {
+        height: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+
+
+    .box1 {
+        background-color: blue;
+        width: 100%;
+    }
+
+    .box2 {
+        background-color: brown;
+        width: 50%;
+        float: left;
+        /* 若同一行上有高度較高的框架 會以此框架為主撐開版面*/
+        /* height: 400px; */
+    }
+
+    .box3 {
+        background-color: antiquewhite;
+        width: 50%;
+        float: right;
+    }
+
+    .box4 {
+        background-color: aquamarine;
+        width: 100%;
+        float: left;
+        /* height: 60vh; */
+    }
+    .containe::after{
+        content: "";
+        clear: both;
+        display: block;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <!-- test container  -->
+        <div class="col box1">box1 header</div>
+        <div class="col box2">box2 aside</div>
+        <div class="col box3">box3 content</div>
+        <div class="col box4">box4 footer</div>
+    </div>
+</body>
+
+</html>
