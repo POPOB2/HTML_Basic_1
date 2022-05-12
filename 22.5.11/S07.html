@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S06老師做</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding: 0;
+
+    }
+
+    .container {
+        width: 960px;
+
+
+        /* height: 500px; */
+        /*content塞東西讓區塊顯示 需要配合上面的高度才能顯示區塊*/
+        /* content: ""; */
+
+
+        /* clear-fix 撐起灰色區域高度 可以參考下方的 .container::after */
+        
+        background-color: rgb(85, 84, 84);
+    }
+
+    /*顯示灰色背景塊*/
+    .container::after {
+        clear: both;
+        content: "";
+        display: block;
+    }
+
+    .col {
+        width: 300px;
+        /* height: 200px; */
+        background-color: lightblue;
+        float: left;
+        margin: 10px;
+    }
+
+    .col>h3 {
+        margin: 10px;
+        text-align: center;
+    }
+
+    .col>p {
+        margin: 20px;
+    }
+
+    .col img {
+        width: 100%;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="col"><img src="https://picsum.photos/id/1006/400/300" >
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odio sapiente non necessitatibus
+                dignissimos assumenda nisi consequatur illum aperiam asperiores vero optio provident quis tenetur sit
+                eligendi, deleniti id voluptatibus?</p>
+        </div>
+        <div class="col"><img src="https://picsum.photos/id/1006/400/300" >
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odio sapiente non necessitatibus
+                dignissimos assumenda nisi consequatur illum aperiam asperiores vero optio provident quis tenetur sit
+                eligendi, deleniti id voluptatibus?</p>
+        </div>
+        <div class="col"><img src="https://picsum.photos/id/1006/400/300" >
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci odio sapiente non necessitatibus
+                dignissimos assumenda nisi consequatur illum aperiam asperiores vero optio provident quis tenetur sit
+                eligendi, deleniti id voluptatibus?</p>
+        </div>
+    </div>
+</body>
+
+</html>
